@@ -24,33 +24,9 @@ fn main() {
     let secret = rpassword::read_password().unwrap();
 
 
+    // Exec as command. Good bye!
     Command::new(command)
       .env(env_var_name, secret)
       .args(command_args)
       .exec();
-
-
-    // set the environment variable
-    // env::set_var(env_var_name, secret);
-
-    // Attempt #1 - requires path
-    // execute the command with the environment variable set
-    // let status = Command::new(command)
-    //   .args(command_args)
-    //   .status()
-    //   .expect("failed to execute command");
-
-    // Attempt #2 - requires /usr/bin/env to exist
-    // let status = Command::new("/usr/bin/env")
-    //   .arg(command)
-    //   .args(command_args)
-    //   .status()
-    //   .unwrap_or_else(|e| {
-    //       eprintln!("failed to execute command: {}", e);
-    //       exit(1);
-    //   });
-
-
-    // exit with the same status code as the executed command
-    //exit(status.code().unwrap_or(1));
 }
