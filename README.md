@@ -1,6 +1,14 @@
 # Secret Env
 Populate environment variables with secrets
 
+## Installation
+
+```bash
+cargo install --path ./
+```
+
+Before using, ensure that `~/.cargo/bin` is your shell path.
+
 ## Usage 
 
 ```bash
@@ -9,4 +17,4 @@ PASSWORD:
 ```
 
 `some_command` now has access to an environment variable named PASSWORD whose contents 
-is not logged in your shell history.
+is helpfully not logged in your shell history.
