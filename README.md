@@ -18,7 +18,7 @@
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/secret_env.git
+   git clone https://github.com/mgadda/secret_env.git
    ```
 
 2. Change into the project directory:
